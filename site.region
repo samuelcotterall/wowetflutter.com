@@ -21,7 +21,7 @@
     <!--HEADER-->
 
     <header id="header">
-
+      <div class="inner">
       <!--SITE TITLE OR LOGO-->
 
       {.section website}
@@ -46,18 +46,33 @@
 
       <squarespace:navigation navigationId="mainNav" template="navigation" />
 
+      </div><!-- /.inner -->
     </header>
 
     <!--CONTENT INJECTION POINT-->
-
-    <section id="content">    
-     {squarespace.main-content}
-    </section>
-
+    <div id="body">
+      <div class="inner">
+        
+        <section id="content">    
+            {squarespace.main-content}
+         </section>
+         
+         
+        <aside id="sidebar">
+          <squarespace:block-field id="blockAbout" columns="12"/>
+          <squarespace:block-field id="blockYouTube" columns="12"/>          
+          <squarespace:block-field id="blockInstagram" columns="12"/>                    
+        </aside>
+        
+     </div><!-- /.inner -->         
+   </div><!-- /.body -->
+    
     <!--FOOTER WITH OPEN BLOCK FIELD-->
 
     <footer id="footer">
-      <squarespace:block-field id="footerBlocks" columns="12" />
+      <div class="inner">
+        <squarespace:block-field id="footerBlocks" columns="12" />
+      </div><!-- /.inner -->
     </footer>
 
     <!--INJECTION POINT FOR TRACKING SCRIPTS AND USER CONTENT FROM THE CODE INJECTION TAB-->

@@ -20,19 +20,64 @@
 @sqsGridNegateGutter: true;
 @sqsGridGutter: 30px;
 
+@sansSerif: "proxima-nova-condensed", Verdana, Arial, sans-serif;
+@serif: "ff-tisa-web-pro", Georgia, serif;
+
+@coral: #f0c9ca;
+@black: #101010;
+@white: #ebebeb;
+@lightGrey: #f0f0f0;
+
 
 /* MOBILE FIRST
 -------------------------------------------------*/
 
 body {
-  max-width: 48em;
-  margin: 0 auto;
-  padding: 100px @sqsGridGutter/2;
+  color: @black;
+	border-top: 10px solid @coral;
+  font-family: @sansSerif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-#header { }
+.inner {
+  max-width: 960px;
+  padding: 0 10px;
+  margin: auto;
+  clear: both;
+  position: relative;
+}
+
+#header {
+  border-bottom: 1px solid @lightGrey;
+  
+  h1 {
+    margin: 40px auto;
+    text-transform: uppercase;
+    a {
+      margin: auto;
+      text-decoration: none;
+      display: block;
+      background: url(/assets/sprites.png);
+      width: 238px;
+      height: 22px;
+      text-indent: -9999px;
+    }
+  }
+  
+}
 
 #main-navigation {
+  
+  text-align: center;
+  font-size: 18px;
+  line-height: 1;
+  text-transform: uppercase;
+  
+  a {
+    text-decoration: none;
+  }
+  
   .folder-child {
     display: none;
   }
@@ -50,11 +95,11 @@ body {
       display: inline-block;
 
       &:not(:last-child) {
-        margin-right: .5em;
+        margin-right: 40px;
       }
 
       &.active-link > a {
-        color: salmon;
+        color: @coral;
       }
 
       &.active-folder .folder-parent > a {
@@ -65,12 +110,40 @@ body {
 }
 
 a {
-  color: #999;
+  color: @black;
 }
 
-#content { }
+#body {
+  clear: both;
+  position: relative;
+  
+  .title {
+    font-weight: normal;
+    line-height: 1.2;
+    a {
+      text-decoration: none;
+    }
+  }
+  #content {
+    .sqs-layout {
+      font-family: @serif;
+      font-size: 16px;
+    }
+  }
+  
+  
+}
 
-#footer { }
+#footer {
+  clear: both;
+  background: @black;
+  color: @white;
+  
+  a {
+    color: @white;
+  }
+  
+}
 
 
 /* HOMEPAGE
@@ -116,4 +189,79 @@ a {
 /* BEYOND MOBILE
 -----------------------------------------------*/
 
-@media screen and ( min-width: 48em ) { }
+@media screen and ( min-width: 768px ) {
+
+  #header {
+  
+    float: left;
+    width: 100%;
+  
+    h1 {
+      margin: 54px 0;
+      width: 300px;
+      float: left;
+      clear: left;
+    }
+
+    #main-navigation {
+      float: left;
+      width: 300px;
+      clear: right;
+      ul {
+        margin: 56px 0;
+      }
+    }
+  
+  }
+
+  #body {
+  
+    .inner {
+      
+      width: 700px;
+      
+    }
+  
+  }
+
+}
+
+@media screen and ( min-width: 1024px ) {
+
+  #body {
+  
+    .inner {
+      width: 960px;
+      padding: 0;
+    }
+  
+  }
+
+  #content {
+  
+    padding: 18px 10px 50px 10px;
+    width: 620px;
+    float: left;
+    position: relative;
+  
+  }
+
+  #sidebar {
+  
+    padding: 50px 10px 50px 50px;
+    width: 220px;
+    float: right;
+    position: relative;
+    border-left: 1px solid @lightGrey;
+    
+    .instagram-block {
+    
+      img {
+/*        width: 60px;*/
+      }
+    
+    }
+    
+  }
+
+}
