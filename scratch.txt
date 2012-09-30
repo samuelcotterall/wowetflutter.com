@@ -1,0 +1,31 @@
+<!--CATEGORIES-->
+
+{.repeated section categories}
+  <a class="category" href="?category={@|url-encode}">{@}</a>{.alternates with},
+{.end}
+
+<!--TAGS-->
+
+{.repeated section tags}
+  <a class="tag" href="?tag={@|url-encode}">{@}</a>{.alternates with},
+{.end}
+
+<!--SHARE AND LIKE-->
+
+{@|like-button}
+{@|social-button}
+
+
+	    <!--LOCATION-->
+
+	    {.section location}
+	      {.section addressTitle}
+	        {addressTitle}
+	        {addressLine1}
+	        {addressLine2}
+	        {addressCountry}
+	      {.end}
+	    {.end}
+
+
+ by <a href="?author={author.id}">{author.displayName}
