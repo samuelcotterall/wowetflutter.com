@@ -68,21 +68,10 @@
 	   <!--POST META-->
     
 	   <p class="meta">
-	     Published on <a href="{fullUrl}">{addedOn|date %B %d, %Y}</a></a> | <a class="link" href="{fullUrl}">Permalink</a>
-	     {.section sourceUrl}
-	       <a href="{@}" class="source" target="_blank">Source</a>.
-	     {.end}
+			 <a class="link" href="{fullUrl}">Permalink</a> | {@|comment-link}
 	   </p>
 			
 		</div><!-- /.blog-post-footer -->
-		
-		 
-
-   
-
-    <!--LINK TO COMMENTS-->
-
-    {@|comment-link}
 
     <!--LOCATION-->
 

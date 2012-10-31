@@ -12,8 +12,10 @@
 
     {squarespace-headers}
 
-    <squarespace:script src="site.js" combo="true" />
+    <squarespace:script src="jquery-1.8.2.min.js" combo="false" />  
   
+    <squarespace:script src="site.js" combo="true" />
+      
   </head>
 
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
@@ -57,10 +59,12 @@
        </section>
          
       <aside id="sidebar">
-        <squarespace:block-field id="blockAbout" columns="12"/>          
-        <squarespace:block-field id="blockYouTube" columns="12"/>          
-        <squarespace:block-field id="blockInstagram" columns="12"/>                    
-        <squarespace:block-field id="blockElsewhere" columns="12"/>                              
+        <div class="sidebar-inner clearfix">
+          <squarespace:block-field id="blockAbout" columns="12"/>          
+          <squarespace:block-field id="blockYouTube" columns="12"/>          
+          <squarespace:block-field id="blockInstagram" columns="12"/>                    
+          <squarespace:block-field id="blockElsewhere" columns="12"/>                              
+        </div>
       </aside>
                  
    </div><!-- /.body -->
@@ -75,6 +79,7 @@
         <div id="footer-social">
           <ul>
             <li><a href="http://www.twitter.com/caroline1985/">Twitter</a></li>
+            <li><a href="http://tumblr.wowetflutter.com">Tumblr</a></li>  
             <li><a href="http://www.youtube.com/wowetflutter/">YouTube</a></li>
             <li><a href="http://www.pinterest.com/wowetflutter/">Pinterest</a></li>
             <li><a href="http://tumblr.wowetflutter.com/tagged/instagram/">Instagram</a></li>
@@ -88,9 +93,11 @@
           </ul>
         </div><!-- /#footer-links -->      
         
+        <!-- <p>Powered by <a href="http://squarespace.com">Squarespace</a> | Fonts by <a href="http://typekit.com">TypeKit</a></p> -->
+        
         <p id="copyright">Copyright &copy; 2012 Wow &amp; Flutter</p>
         
-        <p id="back-to-top"><a href="#">Back to top</a></p>
+        <p id="back-to-top"><a href="#">Back to top<span></span></a></p>
         
         <!-- <squarespace:block-field id="footerBlocks" columns="12" /> -->
       </div><!-- /.inner -->
