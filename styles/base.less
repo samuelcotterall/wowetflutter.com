@@ -162,12 +162,24 @@ a {
     }
     
     .sqs-block-content {
+     
       text-align: justify;
+     
       p, ol, ul, blockquote {
         font-size: 16px;
         line-height: 1.6;
         margin-bottom: 26px;
       }
+      
+      a {
+        color: @coral;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      
+      
     }
     .video-block {
       margin-bottom: 26px;
@@ -239,6 +251,7 @@ a {
   }
   
   #sidebar {  
+    
     font-family: @proxima;
     background: @lightGrey;
     padding: 20px;
@@ -278,6 +291,10 @@ a {
       color: @grey;
       font-size: 14px;
       line-height: 1.5;
+    }
+    
+    #blockAbout a {
+      display: block;
     }
     
     #blockElsewhere {
@@ -323,11 +340,11 @@ a {
   }
   
   .inner {
-    padding: 0;
+    padding: 20px;
   }
   
   > div {
-  
+
     ul {
       
       list-style-type: none;
@@ -347,7 +364,8 @@ a {
       }
             
     }
-    #footer-social { 
+    #footer-social,
+    #footer-links { 
       display: none;
     }
     
@@ -481,7 +499,7 @@ a {
       padding: 20px 0;
       .sidebar-inner {
         float: none;
-        width: 740px;
+        width: 720px;
         position: relative;
         margin: auto; 
         clear: both;
@@ -509,6 +527,8 @@ a {
         
         #blockAbout {
           clear: both;
+          width: 100%;
+          
           p {
             font-size: 18px;  
           }
@@ -575,6 +595,9 @@ a {
         padding-top: 20px
       }
     
+      #footer-links {
+        display: block;
+      }
       #footer-social {
         display: block;
         ul {
@@ -683,32 +706,37 @@ a {
 
 .form-wrapper {
   
-  input[type="submit"],
-  input.button {
-      text-decoration: none;
-      color: @black;
-      background: @coral;
-      border: 0;
-      display: block;
-      padding: 6px 10px;
-      font-size: 14px;
-      line-height: 14px;
-      
-      -webkit-border-radius: 0;
-      -o-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;          
-      
-      -webkit-box-shadow: 0;
-      -o-box-shadow: 0;          
-      -moz-box-shadow: 0;
-      box-shadow: 0;                    
-  
-    &:hover {
-      background: @coralDark;
-    }
-  
-  }
+  /*input[type="submit"],
+    input.button {
+        text-decoration: none;
+        color: @black;
+        background: @coral;
+        border: 0;
+        display: block;
+        padding: 6px 10px;
+        font-size: 18px!important;
+        line-height: 14px;
+        
+        -webkit-border-radius: 0;
+        -o-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;          
+        
+        -webkit-box-shadow: 0;
+        -o-box-shadow: 0;          
+        -moz-box-shadow: 0;
+        box-shadow: 0;   
+        
+        -webkit-text-shadow: 0;
+        -o-text-shadow: 0;          
+        -moz-text-shadow: 0;
+        text-shadow: 0;                  
+    
+      &:hover {
+        background: @coralDark;
+      }
+    
+    }*/
   
    .field-list {
    
